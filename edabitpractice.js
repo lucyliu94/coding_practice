@@ -118,15 +118,40 @@ function checkObj(obj, checkProp) {
 // Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) and false otherwise.
 // Keep in mind JavaScript's Date month is 0 based, meaning December is the 11th month while January is 0.
 
-function timeForMilkAndCookies(date) {
-  let day = date.getDate()
-  let month = date.getMonth()
+// function timeForMilkAndCookies(date) {
+//   let day = date.getDate()
+//   let month = date.getMonth()
 
-  if (day === 24 && month === 11){
+//   if (day === 24 && month === 11){
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(timeForMilkAndCookies())
+
+//////
+// EASY SETS
+//////
+// Create a function that returns true if the first array can be nested inside the second.
+
+// arr1 can be nested inside arr2 if:
+
+// arr1's min is greater than arr2's min.
+// arr1's max is less than arr2's max.
+
+function canNest(arr1, arr2) {
+	if (Math.min(...arr1) > Math.min(...arr2)){
+    return true
+  } else if (Math.max(...arr1) < Math.max(...arr2)) {
     return true
   } else {
     return false
   }
 }
 
-console.log(timeForMilkAndCookies())
+console.log(canNest(arr1, arr2))
+
+
+//if arr1 can be nested in arr2 === true, else false. 
