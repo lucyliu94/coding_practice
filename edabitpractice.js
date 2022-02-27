@@ -103,16 +103,16 @@ console.log(cc(10))
 //Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). 
 //If the property is found, return that property's value. If not, return "Not Found".
 
-function checkObj(obj, checkProp) {
-  // Only change code below this line
-  if (obj.hasOwnProperty(checkProp)) {
-    return obj[checkProp];
-  } else {
-    return "Not Found";
-  }
-  return "Change Me!";
+// function checkObj(obj, checkProp) {
+//   // Only change code below this line
+//   if (obj.hasOwnProperty(checkProp)) {
+//     return obj[checkProp];
+//   } else {
+//     return "Not Found";
+//   }
+//   return "Change Me!";
   // Only change code above this line
-}
+// }
 
 // Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! 
 // Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) and false otherwise.
@@ -141,17 +141,23 @@ function checkObj(obj, checkProp) {
 // arr1's min is greater than arr2's min.
 // arr1's max is less than arr2's max.
 
+// function canNest(arr1, arr2) {
+// 	if (Math.min(...arr1) > Math.min(...arr2)){
+//     return true
+//   } else if (Math.max(...arr1) < Math.max(...arr2)) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+
+
+//ANSWER
 function canNest(arr1, arr2) {
-	if (Math.min(...arr1) > Math.min(...arr2)){
-    return true
-  } else if (Math.max(...arr1) < Math.max(...arr2)) {
-    return true
-  } else {
-    return false
-  }
+	return Math.min(...arr1) > Math.min(...arr2) && Math.max(...arr1) < Math.max(...arr2);
 }
 
-console.log(canNest(arr1, arr2))
-
+console.log(canNest([2,5,21], [34,3,1]))
 
 //if arr1 can be nested in arr2 === true, else false. 
